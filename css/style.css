@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #020617;
+  --card: #0f172a;
+  --primary: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+/* LIGHT MODE */
+.light-mode {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #020617;
+  --muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+/* ===== NAV ===== */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: rgba(56,189,248,0.1);
+  color: var(--primary);
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== SECTION ===== */
+section {
+  margin-bottom: 25px;
+}
+
+section h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* ===== CARDS GRID ===== */
+section:first-child {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+/* ===== CARD ===== */
+article {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+article h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+article p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+article:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+th {
+  background: #1e293b;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-active { color: var(--success); font-weight: 500; }
+.status-warning { color: var(--warning); font-weight: 500; }
+.status-critical { color: var(--danger); font-weight: 500; }
+
+/* ===== BUTTON ===== */
+button {
+  background: var(--primary);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== DARK BUTTON ===== */
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--card);
+  color: var(--primary);
+}
+
+/* ===== BACKGROUND EFFECT ===== */
+.bg-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* 🌙 STARS */
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: #38bdf8;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 4px #38bdf8, 0 0 8px rgba(56,189,248,0.5);
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+.star.small { width: 1px; height: 1px; opacity: 0.6; }
+.star.medium { width: 2px; height: 2px; }
+.star.big { width: 3px; height: 3px; opacity: 1; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ☀️ LIGHT RAYS */
+.ray {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(56,189,248,0.15), transparent);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: float 10s infinite linear;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+/* ===== FORM CENTER FIX ===== */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+legend {
+  padding: 5px 10px;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input, textarea, select {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* ===== 🔥 FIX ADMIN BOX ===== */
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+
+  padding: 8px 12px;
+  margin-right: 30px; /* 🔥 يمنع الالتصاق بالحافة */
+
+  background: var(--card);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+}
+
+aside p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+aside strong {
+  color: var(--primary);
+}

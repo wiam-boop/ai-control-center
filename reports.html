@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incident Reports</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+<h1>AI Control Center</h1>
+
+<nav>
+<ul>
+<li><a href="index.html">Dashboard</a></li>
+<li><a href="traffic.html">Traffic Monitoring</a></li>
+<li><a href="energy.html">Energy Monitoring</a></li>
+<li><a href="threats.html">Threat Logs</a></li>
+<li><a href="reports.html">Incident Reports</a></li>
+</ul>
+</nav>
+
+<aside>
+<p><strong>Admin:</strong> Wiam</p>
+<p><strong>Role:</strong> Engineer</p>
+</aside>
+</header>
+
+<main>
+
+<section>
+<h2>Report Incident</h2>
+
+<form>
+<fieldset>
+<legend>Incident Details</legend>
+
+<label>Title:</label><br>
+<input type="text" required><br><br>
+
+<label>Description:</label><br>
+<textarea required></textarea><br><br>
+
+<label>Severity:</label><br>
+<select required>
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+</select><br><br>
+
+<label>Date:</label><br>
+<input type="date" required><br><br>
+
+<label>Location:</label><br>
+<input type="text" required><br><br>
+
+<label>Upload File:</label><br>
+<input type="file"><br><br>
+
+<button type="submit">Submit</button>
+
+</fieldset>
+</form>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 AI Control Center</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
