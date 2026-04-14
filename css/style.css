@@ -273,3 +273,47 @@ aside p {
 aside strong {
   color: var(--primary);
 }
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 11px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  article {
+    padding: 12px;
+  }
+
+  aside {
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .toggle-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
